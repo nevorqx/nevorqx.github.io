@@ -2,168 +2,97 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEVORQX</title>
-
-    <meta name="description" content="우리 동네 환경을 직접 가꾸는 자발적 공익 봉사단, NEVORQX입니다.">
+       <meta name="description" content="NEVORQX">
     <meta property="og:type" content="website">
     <meta property="og:title" content="NEVORQX">
     <meta property="og:image" content="logo.png">
-    <meta property="og:description" content="깨끗한 지역을 위해 행동하는 시민들의 모임. 지금 우리와 함께하세요.">
+    <meta property="og:description" content="NEVORQX">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="logo.png">
-
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Helvetica', 'Arial', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-            background-color: #ffffff;
-            color: #1a1a1a;
-            line-height: 1.8;
-            -webkit-font-smoothing: antialiased;
-            -webkit-text-size-adjust: none;
+        /* 극강의 미니멀리즘을 위한 리셋 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            background-color: #ffffff; /* 순백색 배경 */
+            color: #000000; /* 완전 검은색 텍스트 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
         }
 
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 60px 20px;
+            max-width: 600px;
+            padding: 20px;
         }
 
-        header {
-            margin-bottom: 40px;
+        /* 로고 스타일링 */
+        .logo img {
+            max-height: 40px; /* 로고 높이 제한 */
+            margin-bottom: 30px; /* 로고와 도메인 사이 간격 */
         }
 
-        .logo-area {
-            margin-bottom: 20px;
+        /* 도메인 이름 강조 */
+        .domain-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            margin-bottom: 15px;
         }
 
-        .logo-link {
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .logo-area img {
-            height: 40px;
-            display: block;
-            border: 0;
-        }
-
-        .top-rule {
-            border: 0;
-            height: 2px;
-            background-color: #1a1a1a;
-            margin: 0;
-        }
-
-        main {
-            padding: 30px 0;
-        }
-
-        .mandate-content {
-            font-size: 15px;
-            color: #333;
-            text-align: justify;
-            word-break: keep-all;
-        }
-
-        .mandate-content p {
-            margin-bottom: 20px;
-        }
-
-        .inline-logo {
-            height: 13px;
-            vertical-align: middle;
-            margin: 0 2px;
-            position: relative;
-            top: -1px;
-        }
-
-        .highlight {
-            font-weight: bold;
-            color: #004B9E;
-        }
-
-        .bottom-rule {
-            border: 0;
-            height: 1px;
-            background-color: #e0e0e0;
-            margin: 60px 0 20px 0;
-        }
-
-        /* 푸터: 저작권과 웹메일 링크를 양 끝으로 배치 */
-        footer {
-            padding-bottom: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .copyright {
-            font-size: 11px;
-            color: #999999;
-            letter-spacing: 0.5px;
-        }
-
-        .webmail-link {
-            font-size: 11px;
-            color: #999999;
-            text-decoration: none;
-            text-transform: uppercase;
+        /* 서브 텍스트 */
+        .sub-text {
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: #555; /* 약간 짙은 회색 */
             letter-spacing: 1px;
-            font-weight: bold;
+            margin-bottom: 50px; /* 서브 텍스트와 이메일 사이 간격 */
         }
 
-        .webmail-link:hover {
-            color: #004B9E;
-            text-decoration: underline;
+        /* 이메일 링크 스타일 */
+        .contact {
+            font-size: 1rem;
+            border-top: 1px solid #eee; /* 아주 연한 선으로 구분 */
+            padding-top: 30px;
         }
 
+        .contact a {
+            color: #000;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        /* 호버 효과: 투명도만 살짝 조절 */
+        .contact a:hover {
+            opacity: 0.6;
+        }
+
+        /* 모바일 최적화 */
         @media (max-width: 600px) {
-            .container { padding: 40px 20px; }
-            .logo-area img { height: 35px; }
-            .mandate-content { font-size: 14px; }
-            footer { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .domain-name { font-size: 2rem; }
+            .logo img { max-height: 35px; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <div class="logo-area">
-            <a href="index.html" class="logo-link">
-                <img src="logo.png" alt="NEVORQX">
-            </a>
+    <div class="container">
+        <div class="logo">
+            <img src="http://nevorqx.top/logo.png" alt="nevorqx logo">
         </div>
-        <hr class="top-rule">
-    </header>
 
-    <main>
-        <div class="mandate-content">
-            <p>
-                <img src="logo.png" class="inline-logo" alt="logo">는 우리 동네의 환경을 우리 손으로 직접 가꾸기 위해 충청남도 서산에서 시작된 자발적으로 모여 만든 공익 봉사단입니다. 
-                우리는 거창한 구호보다 <span class="highlight">현장에서의 실천</span>을 소중히 여기며, 깨끗한 서산을 다음 세대에게 물려주기 위해 활동하고 있습니다.
-            </p>
-            <p>
-                매주 주말, <img src="logo.png" class="inline-logo" alt="logo"> 회원들은 지역 공원, 길가 그리고 도로를 돌며 <span class="highlight">쓰레기 줍기 활동</span>을 펼치고 있습니다. 
-                단순한 청소를 넘어 버려진 자원을 분류하고 재활용하는 문화를 전파하며, 지역 사회의 환경 의식을 높이는 데 앞장서고 있습니다.
-            </p>
-            <p>
-                현재 <span class="highlight">이웃</span>들이 <img src="logo.png" class="inline-logo" alt="logo">와 함께하고 있으며, 작지만 의미 있는 변화를 만들어내고 있습니다. 
-                우리는 앞으로도 대단한 수치보다는 <span class="highlight">집 앞 골목의 깨끗함</span>에서 보람을 찾는 진솔한 봉사 단체로서 지역 사회와 늘 함께하겠습니다.
-            </p>
+        
+        <div class="contact">
+            <a href="mailto:hello@nevorqx.top">hello@nevorqx.top</a>
         </div>
-    </main>
-
-    <hr class="bottom-rule">
-    
-    <footer>
-        <div class="copyright">© 2026 NEVORQX. All rights reserved.</div>
-        <a href="https://www.zoho.com/login.html" class="webmail-link" target="_blank">웹메일</a>
-    </footer>
-</div>
+    </div>
 
 </body>
 </html>
