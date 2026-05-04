@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&family=Playfair+Display:wght@500;600&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 16px 96px;
+  color: #111;
+  line-height: 1.9;
+  background: #fff;
+}
+
+/* 헤더 */
+.site-header {
+  text-align: center;
+  padding: 48px 0 28px;
+  margin-bottom: 72px;
+}
+
+.logo img {
+  height: 24px;
+  opacity: 0.85;
+}
+.logo:hover img { opacity: 0.7; }
+
+/* 제목 */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+h1 { font-size: 34px; margin-bottom: 8px; }
+h2 { font-size: 18px; margin: 52px 0 8px; }
+
+/* 본문 */
+.post-content p {
+  margin: 26px 0;
+}
+
+/* 리스트 */
+.post-list {
+  display: grid;
+  gap: 40px;
+}
+
+.post-item {
+  padding-bottom: 14px;
+  transition: opacity .18s;
+}
+.post-item:hover { opacity: 0.82; }
+
+/* 날짜 */
+.post-date {
+  font-size: 10px;
+  color: #bbb;
+  letter-spacing: 1.5px;
+}
