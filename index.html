@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Parked Service</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <iframe id="targetFrame" src="hhttps://yunseong.dothome.co.kr/"></iframe>
+
+  <script>
+    const iframe = document.getElementById("targetFrame");
+
+    // 1. 로드 실패 감지 (대부분의 차단 상황)
+    let loaded = false;
+
+    iframe.onload = () => {
+      loaded = true;
+    };
+
+    // 2. 일정 시간 후에도 로드 안되면 fallback 처리
+    setTimeout(() => {
+      if (!loaded) {
+        window.location.href = "https://yunseong.dothome.co.kr/";
+      }
+    }, 3000); // 3초 기준 (조절 가능)
+  </script>
+
+</body>
+</html>
